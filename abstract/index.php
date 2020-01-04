@@ -44,7 +44,7 @@
       .banner {
       position: relative;
       height: 210px;
-      background-image: url("/uploads/media/default/0001/01/3f0d2969f2cffeb123ab1a6fa7408bf87bd34bd3.jpeg");
+      background-image: url("../logo_unikom_kuning.png");
       background-size: cover;
       display: flex;
       justify-content: center;
