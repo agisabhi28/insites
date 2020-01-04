@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
       html, body {
-      min-height: 100%;
+      min-height: 60%;
       }
       body, div, form, input, select, p {
       padding: 0;
@@ -35,7 +35,7 @@
       padding: 20px;
       }
       form {
-      width: 100%;
+      width: 60%;
       padding: 20px;
       border-radius: 6px;
       background: #fff;
@@ -44,7 +44,7 @@
       .banner {
       position: relative;
       height: 210px;
-      background-image: url("../logo_unikom_kuning.png");
+      background-image: url("./logo_unikom_kuning.png");
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -83,6 +83,11 @@
       .item {
       position: relative;
       margin: 10px 0;
+      }
+      .abs{
+        position: relative;
+        margin: 10px;
+        height: 10px;
       }
       input[type="date"]::-webkit-inner-spin-button {
       display: none;
@@ -172,7 +177,7 @@
       justify-content: space-between;
       }
       .name-item input, .city-item input {
-      width: calc(50% - 20px);
+      width: calc(100% - 20px);
       }
       .city-item select {
       width: calc(50% - 8px);
@@ -182,112 +187,60 @@
   </head>
   <body>
     <div class="testbox">
-      <form action="/">
+      <form action="absaksi.php">
         <div class="banner">
-          <h1>Training Application Form</h1>
+          <h1>Tambah Data Abstract</h1>
         </div>
-        <h2>Applicant Details</h2>
+        <h2>Abstract Details</h2>
         <div class="item">
-          <p>Name</p>
+          <p>Judul Paper</p>
           <div class="name-item">
-            <input type="text" name="name" placeholder="First"/>
-            <input type="text" name="name" placeholder="Last"/>
+            <input type="text" name="title" placeholder="Judul" required=""/>
           </div>
         </div>
         <div class="item">
-          <p>Phone</p>
-          <input type="text" name="name"/>
+          <p>All Authors</p>
+          <input type="text" name="authors" required=""/>
         </div>
         <div class="item">
-          <p>Fax</p>
-          <input type="text" name="name"/>
+          <p>Institution</p>
+          <input type="text" name="institution" placeholder="Masukkan Nama Institusi Anda" required=""/>
         </div>
         <div class="item">
-          <p>Email</p>
-          <input type="text" name="name"/>
+          <p>Isi Abstract</p>
+          <input type="text" name="isi_abstract" style="height:250px" placeholder="Masukkan Abstract Anda" required=""/>
         </div>
         <div class="item">
-          <p>Company name</p>
-          <input type="text" name="name"/>
+          <p>Keyword</p>
+          <input type="text" name="keyword" required=""/>
         </div>
         <div class="item">
-          <p>Address</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
-          <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
+          <p>Topic</p>
+          <select name="topic" required="">
+              <option value="Engineering and Informatic">Engineering and Informatic</option>
+              <option value="Entrepreneurship">Entrepreneurship</option>
+              <option value="Architecture">Architecture</option>
+              <option value="Urban Planning">Urban Planning</option>
+              <option value="Electrical Engineering">Electrical Engineering</option>
+              <option value="Science">Science</option>
             </select>
           </div>
-        </div>
-        <h2>Course Details</h2>
+
+
         <div class="item">
-          <p>Course Code</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Location</p>
-          <input type="text" name="name"/>
+          <p>Presenter</p>
+          <input type="text" name="presenter"/>
         </div>
         <div class="item">
-          <p>Start Date</p>
-          <input type="date" name="bdate"/>
-          <i class="fas fa-calendar-alt"></i>
-        </div>
-        <h2>Distributor Details</h2>
-        <div class="item">
-          <p>Contact Name</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Distributor Name</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Distributor Address</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
-          <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
-          </div>
-        </div>
-        <div class="item">
-          <p>Phone</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Fax</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="question">
-          <p>Privacy Policy<span class="required">*</span></p>
-          <div class="question-answer checkbox-item">
-            <div>
-              <input type="checkbox" value="none" id="check_1" name="check" required/>
-              <label for="check_1" class="check"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">privacy policy.</a></span></label>
-            </div>
-          </div>
-        </div>
+          <p>Tipe Presentasi</p>
+          <select name="tipe">
+            <option value="Oral Presentation">Oral Presentation</option>
+            <option value="Poster Presentation">Poster Presentation</option>
+          </select>
+
+
         <div class="btn-block">
-          <button type="submit" href="/">Send</button>
+          <button type="submit" value="Send">Send</button>
         </div>
       </form>
     </div>
