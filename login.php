@@ -59,7 +59,7 @@
     </style>
   </head>
   <body>
-    <form action="loginaksi.php">
+    <form action="loginaksi.php" method="post">
       <h1>Login Form</h1>
       <div class="formcontainer">
       <hr/>
@@ -74,8 +74,9 @@
         <label style="padding-left: 15px">
         <input type="checkbox"  checked="checked" name="remember"> Remember me
         </label>
-        <span class="psw"><a href="#"> Forgot password?</a></span>
+
       </div>
+			</div>
     </form>
   </body>
 </html>
