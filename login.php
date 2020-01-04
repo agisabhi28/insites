@@ -59,6 +59,17 @@
     </style>
   </head>
   <body>
+	<?php
+		if (isset($_GET['pesan'])) {
+			if ($_GET['pesan'] == "gagal") {
+				echo "<script>alert('Username Dan Password Salah !')</script>";
+			}elseif ($_GET['pesan'] == "logout") {
+				echo "<script>alert('Anda Berhasil Logout')</script>";
+			}elseif ($_GET['pesan'] == "belum_login") {
+				echo "Anda Harus Login dulu";
+			}
+		}
+	?>
     <form action="loginaksi.php" method="post">
       <h1>Login Form</h1>
       <div class="formcontainer">
